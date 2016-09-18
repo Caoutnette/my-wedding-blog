@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  {% load static %}
+   <link rel="stylesheet" href={% static 'css/styleHM.css' %}/>
+   <title>{% block title %}Marion & Hugo - Le site Web{% endblock %}</title>
+</head>
+<body>
+<header> 
+  <img src={% static "img/Banderole.jpg" alt="baniere mariage" %}/>
+  <h1>Marion & Hugo</br>Château de L'Angladure, Nay, 14 juillet 2017</h1>
+    <nav>
+       {% block nav %}
+       <ul>
+            <li><a href="/">Info pratique</a></li>
+            <li><a href="/blog/">Jour J</a></li>
+            <li><a href="/contact/">Liste</a></li>
+       </ul>
+       {% endblock %}
+   </nav>
+   <mlki/header>
+   <section id="content">
+       {% block content %}{% endblock %}
+   </section>
+<footer>&copy; Catounette cie</footer>
+</body>
+</html>
